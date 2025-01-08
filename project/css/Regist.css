@@ -1,0 +1,58 @@
+.div #btn2{
+    margin: 20px 0;
+    width: 100%;
+    padding: 2%;
+    background-color: rgb(92, 159, 166);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s ease-out;
+
+}
+.div #btn2:hover{
+    background-color: rgb(52, 128, 137);
+}
+
+
+.div label input{
+    border: none;
+background-color: rgb(201, 201, 201) !important;
+    padding: 12px;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+}
+
+.div label input::placeholder{
+    outline: none;
+    color: rgb(146, 146, 146);
+}
+.div label input:focus{
+    outline: none;
+}
+.div label input#email,#phone{
+    width: 100%;
+}
+.div label h4{
+    font-size: 18px;
+    color: #ffffff !important;
+    font-weight: 800;
+    margin: 15px 7px 7px;
+}
+.icon2{
+    color: #ffffff!important;
+}
+.div select#sel{
+    width: 40%;
+    padding: 13px;
+    border: 0px;
+    border-radius: 4px;
+    color: #3d3d3d;
+    background-color: #c9c9c9;
+    outline: none;
+}
+#name,.div label input#email,#phone{
+    width: 173%;
+}

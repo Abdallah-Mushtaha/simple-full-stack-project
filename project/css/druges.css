@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body.druges {
+    height: 100vh;
+    background:url(../img/A\ pharmacy\ in\ Berlin\ by\ Studio\ Aisslinger\ might\ be\ able\ to\ combat\ Doctor\ Google.jpg);
+    background-size: cover!important; 
+    background-position: center !important;
+    font-family: sans-serif;
+}
+.drugesWrrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 55px; */
+    background-color: #00000057;
+    height: 100%;
+}
+input#date ,input#expir,input{
+    width: 100% !important;
+}
+.fa-solid.fa-capsules.icon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: white;
+    padding: 31px;
+}
+h4 {
+    color: #e7e7e7;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 10px;
+}
+input{
+    background: #e2e2e2;
+    padding: 8px;
+    outline: none;
+    border: 0px;
+    border-radius: 5px;
+}
+input#date,input#expir {
+    width: 141% !important;
+}
+input#btn2 {
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 183, 49);
+    font-weight: 600;
+    margin: 18px 0;
+    transition: all .3s ease-in;
+
+}
+input#btn2:hover{
+    background-color: rgb(0, 150, 25);
+
+}
+a#cancel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(156, 13, 13);
+    padding: 9px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition:all .3s ease-out;
+}
+a#cancel:hover{
+    background-color: rgb(180, 13, 13);
+
+}

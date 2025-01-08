@@ -1,0 +1,35 @@
+/* تنسيقات مشتركه   */
+#form{
+    /*  تم اضافته لزر الخطا */
+    height: 575px;
+}
+.EditeLable  {
+    /*  تم اضافته لزر الخطا */
+    margin: 5px 0; 
+    
+}
+span{
+    font-size: 12px !important;
+    color: red !important;
+    padding: 0 8px;
+    transition: all .5s ease-out;
+
+}
+span.star {
+    color: red !important;
+    font-size: 18px !important;
+}
+
+
+/* For regist Page */
+.ErrorMS.regist span{
+    display: block;
+    background-color: #000000a8;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: 900;
+}
+
+
+

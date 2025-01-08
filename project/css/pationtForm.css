@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body.patientbody {
+    overflow-x: hidden;
+    height: 150vh;
+    background:url(../img/image\ \(4\).png);
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.patinetWrrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    background-color: #00000057;
+}
+i.fa-solid.fa-hospital-user.icon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    color: white;
+    padding: 31px;
+}
+h4 {
+    color: #e7e7e7;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 10px;
+}
+input,textarea#textarea{
+    background: #e2e2e2;
+    padding: 8px;
+    outline: none;
+    border: 0px;
+    border-radius: 5px;
+}
+input {
+    width: 133%;
+}
+textarea#textarea{
+    width: 145%;
+    resize: none;
+}
+input#btn2 {
+    width: 108%;
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    margin: 18px 0;
+    transition: all .3s ease-in;
+}
+input#btn2:hover{
+    background-color: rgb(37, 37, 37);
+}
+#Ma,#Fe {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 33px 0 0;
+    color: #dddddd;
+}
+label#Ma input,label#Fe input{
+    width: 45px;
+    font-size: 15px !important;
+    color: #ffffff !important;
+    font-weight: bolder !important;
+}
+input#date {
+    width: 187% !important;
+}
+input[type="number"] {
+    width: 312%;
+}
