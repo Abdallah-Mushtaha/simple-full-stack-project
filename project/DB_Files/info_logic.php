@@ -4,6 +4,9 @@ session_start();
 $user_id = $_SESSION["user_Data"]["id"];
 // echo "<h1>$user_id</h1>"; // للتجربه 
 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./patientPage.php");
+}
 
 
 $query = "SELECT * from patients  where id='$user_id'";

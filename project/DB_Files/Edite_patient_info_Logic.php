@@ -4,6 +4,9 @@ $user_id = $_SESSION["user_Data"]["id"];
 
 include "Connection_DB.php";
 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./info.php");
+}
 
 
 function validate($data)

@@ -4,6 +4,11 @@ $user_id = $_SESSION["user_Data"]["id"];
 include "./DB_Files/Connection_DB.php";
 
 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./login.php");
+}
+
+
 /* سيناريو الحذف رح يصلك  الاي دي اول ما يعمل حذف من خلاله رح اجيب ال ايميل واحذف البيات من الجدول المرضى باستخدام ال اي دي وجدول المستخدمين من خلال الايميل رح احذف  
 
 */

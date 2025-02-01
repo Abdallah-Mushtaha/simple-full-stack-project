@@ -2,6 +2,10 @@
 session_start();
 $user_id = $_SESSION["user_Data"]["id"];
 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./docPage.php");
+}
+
 // واجهة اضافة مريض جديد  
 
 

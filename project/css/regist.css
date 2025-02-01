@@ -1,5 +1,5 @@
 body.regist {
-    height: 80vh !important;
+    height: 100vh !important;
 }
 .regist {
     background-image: none;
@@ -92,5 +92,6 @@ background-color: rgb(201, 201, 201) !important;
     .div select#sel {
         width: 88% !important;
        }   
+  
    
 }

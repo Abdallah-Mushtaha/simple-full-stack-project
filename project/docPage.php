@@ -2,6 +2,10 @@
 session_start();
 $user_id = $_SESSION["user_Data"]["id"];
 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./login.php");
+}
+
 // echo "<h2>$user_id</h2>"; //تجربه للتاكد انو وصل  
 function doctor_table()
 {

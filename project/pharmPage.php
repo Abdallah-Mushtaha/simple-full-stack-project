@@ -58,32 +58,6 @@ function doctor_table()
 
         </main>
 
-        <!-- <div class="cont">
-            <table class="table mt-5">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">dosage</th>
-                        <th scope="col">proudacut Date</th>
-                        <th scope="col">Expired</th>
-                        <th scope="col">pharmistic_ID</th>
-                        <th scope="col">optiones</th>
-
-
-
-
-                    </tr>
-                </thead>
-                <tbody>
-
-
-
-
-                </tbody>
-            </table>
-        </div> -->
 
 
 

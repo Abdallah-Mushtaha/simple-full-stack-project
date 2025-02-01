@@ -2,6 +2,10 @@
 session_start();
 $user_id = $_SESSION["user_Data"]["id"];
 // echo "<h1>$user_id</h1>"; // للتجربه 
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./login.php");
+}
+
 
 include "./DB_Files/Connection_DB.php";
 

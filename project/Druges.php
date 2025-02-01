@@ -1,6 +1,9 @@
 <?php
 session_start();
 $user_id = $_SESSION["user_Data"]["id"];
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./PharmPage.php");
+}
 
 function rgister($id = "", $name = "", $dosage = "", $proudacutDate = "", $Expired = "")
 { ?>
