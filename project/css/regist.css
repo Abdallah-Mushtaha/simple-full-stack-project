@@ -1,0 +1,96 @@
+body.regist {
+    height: 80vh !important;
+}
+.regist {
+    background-image: none;
+    background: rgb(0,155,210);
+background: linear-gradient(53deg, rgba(0,155,210,1) 0%, rgba(14,42,66,1) 50%, rgba(1,143,194,1) 100%);
+
+
+}
+
+
+form#form2 {
+    margin: 0 auto;
+    width: 65%;
+}
+
+.div #btn2{
+    margin: 20px 0;
+    width: 88% !important;
+    padding: 2%;
+    background-color: rgb(92, 159, 166);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s ease-out;
+
+}
+.div #btn2:hover{
+    background-color: rgb(52, 128, 137);
+}
+.div label input{
+    border: none;
+background-color: rgb(201, 201, 201) !important;
+    padding: 7px;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+}
+.div label input::placeholder{
+    outline: none;
+    color: rgb(146, 146, 146);
+}
+.div label input:focus{
+    outline: none;
+}
+.div label input#email,#phone{
+    width: 100%;
+}.div label h4{
+    font-size: 18px;
+    color: #ffffff !important;
+    font-weight: 800;
+    margin: 15px 7px 7px;
+}
+.icon2{
+    color: #ffffff!important;
+}
+.div select#sel{
+    width: 100%;
+    padding: 13px;
+    border: 0px;
+    border-radius: 4px;
+    color: #3d3d3d;
+    background-color: #c9c9c9;
+    outline: none;
+    margin-top: 12%;
+}
+.loginWrrapper, .registWrrapper {
+    height: 100% !important;
+}
+
+
+@media (min-width:700px) {
+    .regist {
+        background-image: url("../img/image\ \(4\).png");
+        background-position: center ;
+  background-size: cover;
+    }
+   .div select#sel {
+    width: 88% !important; 
+   }   
+   .ErrorMS.regist span {
+    width: 87%;
+   }
+  
+
+    
+}
+@media (max-width:700px) {
+    .div select#sel {
+        width: 88% !important;
+       }   
+   
+}

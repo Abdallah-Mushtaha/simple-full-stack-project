@@ -80,59 +80,76 @@ if ($result === false) {
         }
 
 ?>
-        <th scope="row"><?php echo "◾" ?></th>
-        <td><?php echo $row["id"] ?></td>
-        <td><?php echo  $row["name"] ?></td>
-        <td><?php echo $row["email"] ?></td>
-        <td><?php echo  substr($row["password"], 0, 10)  ?></td>
-        <td><?php echo  $row["age"] ?></td>
-        <td><?php echo  $row["gender"] ?></td>
-        <td><?php echo  $row["problem"] ?></td>
-        <td><?php echo  $row["entranceDate"] ?></td>
-        <td><?php echo  $row["phoneNumber"] ?></td>
-        <td>
-            <!-- عشان اعرض الادويه بطريقه  ليست-->
-            <ul>
-                <?php
+        <div class="row   justify-content-center ">
+            <div class="col-md-10 ">
+                <div class="wrapper ">
+                    <div class="box">
 
-                foreach ($drugs as $drug) {
-                    echo "<li>" . htmlspecialchars($drug) . "</li>";
-                }
-                ?>
-            </ul>
-        </td>
-        <td>
-            <!--                                    زر الحذف
+
+
+                        <div class="title"> <small id="id"><?php echo  "#", $row["id"], " :: " ?></small>
+                            <small id="name"><?php echo  $row["name"] ?></small>
+                        </div>
+                        <div class="wrapper-info">
+                            <div id="email"><?php echo "<span>Email :: </span> ", $row["email"] ?></div>
+                            <div id="password"><?php echo "<span>password :: </span>",  substr($row["password"], 0, 10)  ?></div>
+                            <div id="age"><?php echo "<span>age :: </span>",  $row["age"] ?></div>
+                            <div id="gender"><?php echo  "<span>gender :: </span> ", $row["gender"] ?></div>
+                            <div id="problem"><?php echo "<span>problem :: </span> ",  $row["problem"] ?></div>
+                            <div id="entranceDate"><?php echo  "<span>entranceDate :: </span> ",  $row["entranceDate"] ?></div>
+                            <div id="phoneNumber"><?php echo "<span>phoneNumber :: </span> ",  $row["phoneNumber"] ?></div>
+                            <span>drugs :: </span>
+                            <td>
+                                <!-- عشان اعرض الادويه بطريقه  ليست-->
+                                <ul>
+                                    <?php
+
+                                    foreach ($drugs as $drug) {
+                                        echo "<li>" . htmlspecialchars($drug) . "</li>";
+                                    }
+                                    ?>
+                                </ul>
+                            </td>
+                        </div>
+                        <td>
+                            <div class="btn-wrapper d-flex  justify-content-center align-items-center gap-2">
+                                <!--                                    زر الحذف
                   رح يصير كود الحذف بنفس الصفحه ورح يبعت ال اي دي ومن خلاله بجيب الايميل  وبحذف من جدول المستخدمين ومن خلال الاي دي بحذف من جدول المريض 
                 -->
-            <form action="" method="get" style="display:inline;">
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
-                <input type="submit" name="delet" value="Delete" onclick="return confirm('Are you sure you want to delete this patient?');">
-            </form>
+                                <form action="" method="get" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
+                                    <input type="submit" name="delet" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this patient?');">
+                                </form>
 
-            <!--   زر التعديل
+                                <!--   زر التعديل
             pationt form Logic   رح ابعت البيانات ال لازمه  لصفحه ورح يصير السيناريو ال ذكرتو بصفحة ال -->
-            <form action="./patientForm.php" method="post" style="display:inline;">
-                <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
-                <input type="hidden" name="name" value="<?php echo htmlspecialchars($row["name"]); ?>">
-                <input type="hidden" name="email" value="<?php echo htmlspecialchars($row["email"]); ?>">
-                <input type="hidden" name="age" value="<?php echo htmlspecialchars($row["age"]); ?>">
-                <input type="hidden" name="gender" value="<?php echo htmlspecialchars($row["gender"]); ?>">
+                                <form action="./patientForm.php" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
+                                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row["name"]); ?>">
+                                    <input type="hidden" name="email" value="<?php echo htmlspecialchars($row["email"]); ?>">
+                                    <input type="hidden" name="age" value="<?php echo htmlspecialchars($row["age"]); ?>">
+                                    <input type="hidden" name="gender" value="<?php echo htmlspecialchars($row["gender"]); ?>">
 
-                <input type="hidden" name="entranceDate" value="<?php echo htmlspecialchars($row["entranceDate"]); ?>">
+                                    <input type="hidden" name="entranceDate" value="<?php echo htmlspecialchars($row["entranceDate"]); ?>">
 
-                <input type="hidden" name="password" value="<?php echo htmlspecialchars($row["password"]); ?>">
-                <input type="hidden" name="problem" value="<?php echo htmlspecialchars($row["problem"]); ?>">
-                <input type="hidden" name="phone" value="<?php echo htmlspecialchars($row["phoneNumber"]); ?>">
-                <input type="submit" name="Edite" value="Edit">
+                                    <input type="hidden" name="password" value="<?php echo htmlspecialchars($row["password"]); ?>">
+                                    <input type="hidden" name="problem" value="<?php echo htmlspecialchars($row["problem"]); ?>">
+                                    <input type="hidden" name="phone" value="<?php echo htmlspecialchars($row["phoneNumber"]); ?>">
+                                    <input type="submit" name="Edite" class="btn btn-primary" value="Edit">
 
-                <a href="./ADD_DrugeUI.php?Patient_id=<?php echo htmlspecialchars($row["id"]); ?>" id="AddDruge">Add Drug</a>
-            </form>
+                                    <a class="btn btn-success" href="./ADD_DrugeUI.php?Patient_id=<?php echo htmlspecialchars($row["id"]); ?>" id="AddDruge">Add Drug</a>
+                                </form>
 
-        </td>
+                        </td>
+
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
 
-        </tr>
 <?php
 
     }

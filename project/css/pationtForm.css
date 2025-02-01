@@ -8,18 +8,21 @@ img{
 }
 body.patientbody {
     overflow-x: hidden;
-    height: 150vh;
+    height: 157vh !important;
+}
+body{
     background:url(../img/image\ \(4\).png);
     background-position: center;
     background-size: cover;
     font-family: sans-serif;
 }
-.patinetWrrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 55px;
-    background-color: #00000057;
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.divForm {
+    width: 100%;
+    padding: 49px;
 }
 i.fa-solid.fa-hospital-user.icon2 {
     display: flex;
@@ -35,22 +38,24 @@ h4 {
     font-weight: 600;
     margin: 10px 0 10px;
 }
+.shadow {
+    background-color: #00000057;
+}
 input,textarea#textarea{
     background: #e2e2e2;
     padding: 8px;
     outline: none;
     border: 0px;
     border-radius: 5px;
+    width: 100%;
 }
-input {
-    width: 133%;
-}
-textarea#textarea{
-    width: 145%;
+
+textarea{
+    width: 116%!important;
     resize: none;
 }
 input#btn2 {
-    width: 108%;
+
     color: white;
     background-color: black;
     font-weight: 600;
@@ -60,8 +65,9 @@ input#btn2 {
 input#btn2:hover{
     background-color: rgb(37, 37, 37);
 }
+
 #Ma,#Fe {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     padding: 0px 33px 0 0;
     color: #dddddd;
@@ -73,8 +79,34 @@ label#Ma input,label#Fe input{
     font-weight: bolder !important;
 }
 input#date {
-    width: 187% !important;
+    width: 143% !important;
 }
 input[type="number"] {
-    width: 312%;
+    width: 282%;
+} 
+
+@media (min-width:700px) {
+    form#form2 {
+        padding: 59px 22%;
+    }
+    .container {
+        width: 33%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    input[type="number"] {
+        width: 241%;
+    }
+    body{
+        background:url(../img/image\ \(4\).png);
+        background-position: center;
+        background-size: inherit;
+    }
+    input#btn2{
+        width: 100%;
+    }
+    .ErrorMS.regist span{
+    width: 90%;
+    }
+
 }

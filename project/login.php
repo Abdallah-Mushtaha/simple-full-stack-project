@@ -9,7 +9,7 @@ function login()
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>login</title>
         <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Sstyle.css">
 
     </head>
 
@@ -52,7 +52,9 @@ function loginEdite($email = "", $password = "")
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>login</title>
         <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Sstyle.css">
+
+
         <link rel="stylesheet" href="css/Style1.css">
 
     </head>

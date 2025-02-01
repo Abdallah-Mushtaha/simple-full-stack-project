@@ -24,19 +24,41 @@ function doctor_table()
     </head>
 
     <body>
+        <header>
+            <nav class="navbar bg-body-tertiary mb-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Druges</a>
+                    <div class="d-flex gap-2" role="search">
+                        <a href="./login.php" class="btn btn-outline-success" type="submit">Logout</a>
+                        <a href="./Druges.php" class="btn btn-outline-success" type="submit">Add Druge</a>
 
-        <nav class="navbar bg-body-tertiary mb-5">
-            <div class="container-fluid">
-                <a class="navbar-brand">Druges</a>
-                <div class="d-flex gap-2" role="search">
-                    <a href="./login.php" class="btn btn-outline-success" type="submit">Logout</a>
-                    <a href="./Druges.php" class="btn btn-outline-success" type="submit">Add Druge</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
+        <main>
+            <div class="cont my-5 ">
+                <div class="wrapper container">
+                    <h2 class=" py-3">pharmaceutical :: </h2>
+                    <tbody>
+
+                        <?php
+                        include "./DB_Files/pharmPage_logic.php";
+                        ?>
+
+
+
+                    </tbody>
+                    </table>
                 </div>
             </div>
-        </nav>
 
-        <div class="cont">
+            <div class="dd"></div>
+
+        </main>
+
+        <!-- <div class="cont">
             <table class="table mt-5">
                 <thead>
                     <tr>
@@ -56,15 +78,12 @@ function doctor_table()
                 </thead>
                 <tbody>
 
-                    <?php
-                    include "./DB_Files/pharmPage_logic.php";
-                    ?>
 
 
 
                 </tbody>
             </table>
-        </div>
+        </div> -->
 
 
 

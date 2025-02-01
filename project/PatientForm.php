@@ -16,117 +16,91 @@ function patinentRejest($id = "", $name = "", $email = "", $password = "", $Age 
         <title>patinentForm</title>
         <link rel="stylesheet" href="./css/all.min.css">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/pationtForm.css">
+        <link rel="stylesheet" href="./css/PationtForm.css">
 
 
 
     </head>
 
     <body class="patientbody">
-        <div class="patinetWrrapper">
-            <div class="div">
+        <div class="shadow">
+            <div class="patinetWrrapper container">
+                <div class="divForm">
 
-                <i class="fa-solid fa-hospital-user icon2"></i>
-
-
-                <form action="" method="post" id="form2">
+                    <i class="fa-solid fa-hospital-user icon2"></i>
 
 
-                    <input type="hidden" name="id" value="<?php echo $id ?>">
-                    <label>
-                        <h4>name </h4>
-                        <input type="text" name="name" placeholder="Ali..." required value="<?php echo $name ?>">
-                    </label>
+                    <form action="" method="post" id="form2">
 
 
-                    <div>
+                        <input type="hidden" name="id" value="<?php echo $id ?>">
                         <label>
-                            <h4>Email</h4>
-                            <input id="email" type="email" required name="email" placeholder="Ali@gmail......." value="<?php echo $email ?>">
+                            <h4>name </h4>
+                            <input type="text" name="name" placeholder="Ali..." required value="<?php echo $name ?>">
                         </label>
-                    </div>
-                    <div>
-                        <label>
-                            <h4>password</h4>
-                            <input type="password" id="pass" name="password" placeholder="123456.." required value="<?php echo $password ?>">
-                        </label>
+
+
                         <div>
                             <label>
-                                <h4>Age </h4>
-                                <input type="number" min="0" max="100" name="Age" placeholder="20" value="<?php echo $Age ?>" required>
+                                <h4>Email</h4>
+                                <input id="email" type="email" required name="email" placeholder="Ali@gmail......." value="<?php echo $email ?>">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <h4>password</h4>
+                                <input type="password" id="pass" name="password" placeholder="123456.." required value="<?php echo $password ?>">
+                            </label>
+                            <div>
+                                <label>
+                                    <h4>Age </h4>
+                                    <input type="number" min="0" max="100" name="Age" placeholder="20" value="<?php echo $Age ?>" required>
+                                </label>
+                            </div>
+
+
+                            <h4>Gender </h4>
+
+                            <label for="Male" id="Ma">
+                                <input type="radio" id="Male" name="Gender" value="Male" <?php echo ($Gender == 'Male') ? 'checked' : ''; ?> required>
+                                Male
+                            </label>
+
+                            <label for="Femal" id="Fe">
+                                <input type="radio" id="Female" name="Gender" value="Female" <?php echo ($Gender == 'Female') ? 'checked' : ''; ?> required>
+                                Female
+                            </label>
+
+
+
+
+                        </div>
+                        <div>
+                            <label>
+                                <h4>phone number</h4>
+                                <input type="text" name="phone" id="phone" placeholder="05354646" value="<?php echo $phone ?>">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <h4>Date</h4>
+                                <input type="date" name="date" id="date" placeholder="05354646" value="<?php echo $date ?>">
                             </label>
                         </div>
 
 
-                        <h4>Gender </h4>
 
-                        <label for="Male" id="Ma">
-                            <input type="radio" id="Male" name="Gender" value="Male" <?php echo ($Gender == 'Male') ? 'checked' : ''; ?> required>
-                            Male
-                        </label>
-
-                        <label for="Femal" id="Fe">
-                            <input type="radio" id="Female" name="Gender" value="Female" <?php echo ($Gender == 'Female') ? 'checked' : ''; ?> required>
-                            Female
-                        </label>
-
-
-
-
-                    </div>
-                    <div>
                         <label>
-                            <h4>phone number</h4>
-                            <input type="text" name="phone" id="phone" placeholder="05354646" value="<?php echo $phone ?>">
+                            <h4>Problem</h4>
+                            <textarea required name="problem" id="textarea" rows="10" placeholder=" I fell ......."><?php echo $problem ?></textarea>
                         </label>
-                    </div>
-                    <div>
-                        <label>
-                            <h4>Date</h4>
-                            <input type="date" name="date" id="date" placeholder="05354646" value="<?php echo $date ?>">
-                        </label>
-                    </div>
 
 
+                        <input id="btn2" type="submit" name="creat" value=" creat " />
 
-                    <label>
-                        <h4>Problem</h4>
-                        <textarea required name="problem" id="textarea" rows="10" placeholder=" I fell ......."><?php echo $problem ?></textarea>
-                    </label>
+                    </form>
 
-
-                    <!-- Selection Druges-->
-                    <!-- <div>
-                        <label id="selWrap">
-                            <h4>drug</h4>
-
-
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Panadol"> Panadol
-                            </label>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Adol"> Adol
-                            </label>
-                            <br>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Brufen"> Brufen
-                            </label>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Voltaren"> Voltaren
-                            </label><br>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Nexium"> Nexium
-                            </label>
-
-
-                        </label>
-                    </div> -->
-
-                    <input id="btn2" type="submit" name="creat" value=" creat " />
-
-                </form>
-
-
+                </div>
             </div>
 
 
@@ -162,113 +136,90 @@ function patinentRejest_Edite($name = "", $email = "", $password = "", $Age = ""
     </head>
 
     <body class="patientbody">
-        <div class="patinetWrrapper">
-            <div class="div">
+        <div class="shadow">
+            <div class="patinetWrrapper container">
+                <div class="divForm">
 
-                <i class="fa-solid fa-hospital-user icon2"></i>
-
-
-                <form action="" method="post" id="form2">
+                    <i class="fa-solid fa-hospital-user icon2"></i>
 
 
-                    <label>
-                        <h4>name </h4>
-                        <input type="text" name="name" placeholder="Ali..." value="<?php echo $name ?>" required>
-                    </label>
+                    <form action="" method="post" id="form2">
 
 
-                    <div>
                         <label>
-                            <h4>Email</h4>
-                            <input id="email" type="email" required name="email" placeholder="Ali@gmail......." value="<?php echo $email ?>">
+                            <h4>name </h4>
+                            <input type="text" name="name" placeholder="Ali..." value="<?php echo $name ?>" required>
                         </label>
-                    </div>
-                    <small class="ErrorMS regist"><span>This email is already in use. <br> Choose another one * </span></small>
-                    <div>
-                        <label>
-                            <h4>password</h4>
-                            <input type="password" id="pass" name="password" value="<?php echo $password ?>" placeholder="123456.." required>
-                        </label>
+
+
                         <div>
                             <label>
-                                <h4>Age </h4>
-                                <input type="number" min="0" max="100" name="Age" placeholder="20" value="<?php echo $Age ?>" required>
+                                <h4>Email</h4>
+                                <input id="email" type="email" required name="email" placeholder="Ali@gmail......." value="<?php echo $email ?>">
+                            </label>
+                        </div>
+                        <small class="ErrorMS regist"><span>This email is already in use. <br> Choose another one * </span></small>
+                        <div>
+                            <label>
+                                <h4>password</h4>
+                                <input type="password" id="pass" name="password" value="<?php echo $password ?>" placeholder="123456.." required>
+                            </label>
+                            <div>
+                                <label>
+                                    <h4>Age </h4>
+                                    <input type="number" min="0" max="100" name="Age" placeholder="20" value="<?php echo $Age ?>" required>
+                                </label>
+                            </div>
+
+
+                            <h4>Gender </h4>
+
+                            <label for="Male" id="Ma">
+                                <input type="radio" id="Male" name="Gender" value="Male" <?php echo ($Gender == "Male") ? 'checked' : ''; ?>
+                                    required>
+                                Male
+                            </label>
+
+                            <label for="Femal" id="Fe">
+                                <input type="radio" id="Femal" name="Gender" value="Femal" <?php echo ($Gender == "Femal") ? 'checked' : ''; ?>
+                                    required>
+                                Femal
+                            </label>
+
+
+
+
+                        </div>
+                        <div>
+                            <label>
+                                <h4>phone number</h4>
+                                <input type="text" name="phone" id="phone" value="<?php echo $phone ?>" placeholder="05354646">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <h4>Date</h4>
+                                <input type="date" name="date" id="date" value="<?php echo $date ?>" placeholder="05354646">
                             </label>
                         </div>
 
 
-                        <h4>Gender </h4>
 
-                        <label for="Male" id="Ma">
-                            <input type="radio" id="Male" name="Gender" value="Male" <?php echo ($Gender == "Male") ? 'checked' : ''; ?>
-                                required>
-                            Male
-                        </label>
-
-                        <label for="Femal" id="Fe">
-                            <input type="radio" id="Femal" name="Gender" value="Femal" <?php echo ($Gender == "Femal") ? 'checked' : ''; ?>
-                                required>
-                            Femal
-                        </label>
-
-
-
-
-                    </div>
-                    <div>
                         <label>
-                            <h4>phone number</h4>
-                            <input type="text" name="phone" id="phone" value="<?php echo $phone ?>" placeholder="05354646">
+                            <h4>Problem</h4>
+                            <textarea required name="problem" id="textarea" rows="10" placeholder=" I fell ......."><?php echo $problem ?></textarea>
                         </label>
-                    </div>
-                    <div>
-                        <label>
-                            <h4>Date</h4>
-                            <input type="date" name="date" id="date" value="<?php echo $date ?>" placeholder="05354646">
-                        </label>
-                    </div>
 
 
 
-                    <label>
-                        <h4>Problem</h4>
-                        <textarea required name="problem" id="textarea" rows="10" placeholder=" I fell ......."><?php echo $problem ?></textarea>
-                    </label>
+                        <input id="btn2" type="submit" name="creat" value=" creat " />
+
+                    </form>
 
 
-                    <!-- Selection Druges-->
-                    <!-- <div>
-                        <label id="selWrap">
-                            <h4>drug</h4>
-
-
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Panadol"> Panadol
-                            </label>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Adol"> Adol
-                            </label>
-                            <br>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Brufen"> Brufen
-                            </label>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Voltaren"> Voltaren
-                            </label><br>
-                            <label class="sel">
-                                <input type="checkbox" name="medications[]" value="Nexium"> Nexium
-                            </label>
-
-
-                        </label>
-                    </div> -->
-
-                    <input id="btn2" type="submit" name="creat" value=" creat " />
-
-                </form>
-
-
+                </div>
             </div>
+        </div>
 
 
         </div>

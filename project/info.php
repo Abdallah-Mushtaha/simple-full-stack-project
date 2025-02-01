@@ -10,7 +10,7 @@ function backdata()
         <title>Document</title>
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/info.css">
+        <link rel="stylesheet" href="css/Info.css">
 
     </head>
 

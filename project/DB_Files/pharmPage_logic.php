@@ -36,45 +36,59 @@ if ($result === false) {
     while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
-        <th scope="row"><?php echo "◾" ?></th>
-        <td><?php echo $row["id"] ?></td>
-        <td><?php echo  $row["name"] ?></td>
-        <td><?php echo  $row["dosage"] ?></td>
-        <td><?php echo $row["productionDate"] ?></td>
-        <td><?php echo  $row["expiryDate"] ?></td>
-        <td><?php echo  $row["pharmacists_id"] ?></td>
+        <div class="row   align-items-center justify-content-center">
+            <div class="col-md-10 ">
+                <div class="wrapper ">
+                    <div class="box">
+                        <div class="title">
+                            <small id="id"><?php echo  "#", $row["id"], " :: " ?></small>
+                            <small id="name"><?php echo  $row["name"] ?></small>
+                        </div>
 
-        <td>
-            <div class="wrrapicon">
+                        <div class="wrapper-info">
+                            <div id="dosage"><?php echo "<span>dosage :: </span> ", $row["dosage"] ?></div>
+                            <div id="productionDate"><?php echo "<span>productionDate :: </span>",  substr($row["productionDate"], 0, 10)  ?></div>
+                            <div id="expiryDate"><?php echo "<span>expiryDate :: </span>",  $row["expiryDate"] ?></div>
+                            <div id="pharmacists_id"><?php echo  "<span>pharmacists_id :: </span> ", $row["pharmacists_id"] ?></div>
 
-                <form action="" method="get" style="display:inline;">
-                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
-                    <input type="submit" name="delet" value="Delete" onclick="return confirm('Are you sure you want to delete this patient?');">
-                </form>
+                        </div>
+                        <div class="btn-wrapper d-flex  justify-content-center align-items-center gap-2">
+                            <div class="wrrapicon">
+
+                                <form action="" method="get" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
+                                    <input type="submit" name="delet" class="btn btn-danger" value="Delete" onclick="return confirm('Are you sure you want to delete this patient?');">
+                                </form>
 
 
-                <!--   زر التعديل
+                                <!--   زر التعديل
             pationt form Logic   رح ابعت البيانات ال لازمه  لصفحه ورح يصير السيناريو ال ذكرتو بصفحة ال -->
-                <form action="./Druges.php" method="post" style="display:inline;">
-                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row["name"]); ?>">
-                    <input type="hidden" name="dosage" value="<?php echo htmlspecialchars($row["dosage"]); ?>">
-                    <input type="hidden" name="productionDate" value="<?php echo htmlspecialchars($row["productionDate"]); ?>">
+                                <form action="./Druges.php" method="post" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($row["id"]); ?>">
+                                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($row["name"]); ?>">
+                                    <input type="hidden" name="dosage" value="<?php echo htmlspecialchars($row["dosage"]); ?>">
+                                    <input type="hidden" name="productionDate" value="<?php echo htmlspecialchars($row["productionDate"]); ?>">
 
-                    <input type="hidden" name="expiryDate" value="<?php echo htmlspecialchars($row["expiryDate"]); ?>">
-
-
-                    <input type="submit" name="Edite" value="Edit">
-
-                </form>
+                                    <input type="hidden" name="expiryDate" value="<?php echo htmlspecialchars($row["expiryDate"]); ?>">
 
 
+                                    <input type="submit" name="Edite" class="btn btn-primary" value="Edit">
 
+                                </form>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
-        </td>
+
+        </div>
 
 
-        </tr>
+
 <?php
     }
     die();
