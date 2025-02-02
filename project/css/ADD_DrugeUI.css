@@ -1,10 +1,8 @@
-div {
-    display: flex;
-    justify-content: center;
-    padding: 10%;
-}
-
-form {
+ div {
+        display: flex  ;
+        padding: 10%;
+    }
+ form {
     background-color: #dadada;
     width: 160px;
     padding: 55%;
@@ -19,4 +17,10 @@ input[type="submit"] {
     padding: 8px;
     width: 100%;
     cursor: pointer;
+}
+@media (min-width:700px) {
+    div {
+       justify-content: center;
+    
+    }
 }

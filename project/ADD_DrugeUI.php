@@ -14,6 +14,9 @@ if (isset($_SESSION["Patient_id"])) {
     echo "Patient ID is not set.";
     exit();
 }
+if (isset($_SESSION["user_Data"]) != true) {
+    header("Location:./docPage.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ if (isset($_SESSION["Patient_id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ADD_DrugeUI.css">
+    <link rel="stylesheet" href="css/aDD_DrugeUI.css">
     <title>ADD_Druge</title>
 </head>
 
